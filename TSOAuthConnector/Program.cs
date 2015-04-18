@@ -54,8 +54,8 @@ namespace TSOAuthConnector
                 HttpResponseMessage response = await client.GetAsync("");
                 if (response.IsSuccessStatusCode)
                 {
-                    Tradeshift stuff = await response.Content.ReadAsAsync<Tradeshift>();
-                    Console.WriteLine("{0}", stuff.itemCount);
+                    Tradeshift res = await response.Content.ReadAsAsync<Tradeshift>();
+                    Console.WriteLine("{0}", res.itemCount);
                 }
                 else
                 {
